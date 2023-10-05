@@ -1,75 +1,76 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
+    "name": "Yukki Music Bot",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/c0e014ff34f34d1056627.png",
     "keywords": [
     "python3",
     "telegram",
     "bot",
-    "AnonX",
-    "MusicBot",
+    "Yukki",
+    "YukkiMusicBot",
     "telegram-bot",
     "pyrogram"
     ],
+    "stack": "container",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "9619079",
+        "value": "",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "7965cc38fd61b639da7eca6880765ca5",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
-        "value": "6423099772:AAHCp4dhc0Q7dbSczomepumlNxf0H0WC_2I",
-        "required": true
-      },
-      "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "mongodb+srv://kovanseary:MjSgFNfW6fMdL7PO@cluster0.lisaugs.mongodb.net/?retryWrites=true&w=majority",
-        "required": true
-      },
-      "OWNER_ID": {
-        "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "833360381",
-        "required": true
-      },
-      "SUPPORT_CHANNEL": {
-        "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "https://t.me/MGIMT",
-        "required": true
-      },
-      "SUPPORT_GROUP": {
-        "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "https://t.me/IQSUPP",
+        "value": "",
         "required": true
       },
       "AUTO_LEAVING_ASSISTANT": {
         "description": "If you want your assistant to leave all chats automatically after some time.",
         "value": "True",
+        "required": true
+      },
+      "PRIVATE_BOT_MODE": {
+        "description": "Set it True, If you want your bot to be private for authorized chats. Else leave it blank",
+        "value": "False",
         "required": false
       },
+      "BOT_TOKEN": {
+        "description": "A Bot's token from Botfather",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "Mongo DB URL",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "A name for your Music Bot. Please don't use ascii characters",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "",
+        "required": true
+      },
       "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
-        "value": "AgAhIHQANRojX_5_9UOoNYBFHNZsfpm_NP4fXNdTSYAbYAPlhZ4NTYV-Y7FF_NR8SIJfPy4M0Z6P72NNYhAJgnYct36pb7qlU1Z2mh-RQj5q2_3RLaWkF76N7Al4bgv8U15KPn3Ya6QJSADc_0HZe9ZvXriDhHqYmI0rSbw2pVPBNfk9N3o722qTh6LQ0X1gNc7xCvcdkf5svNuXC0RrxQ4hcCAY7kTqKBj5HFsC9OmdD02YnxbgOENMyYx5xYWiYcjaNeAuNEUmRYEbtwkMMJyTl1O0KPW5Fv5CzkQdblS0bGydJ5cnA5T9voMMbv1TXBSVMZmIzB-YeEekoAUYyM1-hzn4sAAAAAFu7FdkAA",
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
-        "value": "f70a420a-2df9-4e2d-9c81-c52f28f654a7",
+        "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app name",
-        "value": "iqalo",
+        "description": "Your heroku app/bot's name",
+        "value": "",
         "required": false
       },
       "LOG_GROUP_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-        "value": "-1001801583479",
+        "value": "",
         "required": true
       },
       "UPSTREAM_REPO": {
@@ -78,7 +79,7 @@
         "required": true
       },
       "UPSTREAM_BRANCH": {
-        "description": "Upstream Repo's Branch Name",
+        "description": "Repo's Branch Name",
         "value": "master",
         "required": true
       }
@@ -94,5 +95,11 @@
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
       ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      },
       "stack": "container"
   }
