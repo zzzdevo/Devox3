@@ -1,17 +1,16 @@
 {
-    "name": "Yukki Music Bot",
-    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
-    "logo": "https://telegra.ph/file/c0e014ff34f34d1056627.png",
+    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
     "keywords": [
     "python3",
     "telegram",
     "bot",
-    "Yukki",
-    "YukkiMusicBot",
+    "AnonX",
+    "MusicBot",
     "telegram-bot",
     "pyrogram"
     ],
-    "stack": "container",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
@@ -23,38 +22,38 @@
         "value": "",
         "required": true
       },
-      "AUTO_LEAVING_ASSISTANT": {
-        "description": "If you want your assistant to leave all chats automatically after some time.",
-        "value": "True",
-        "required": true
-      },
-      "PRIVATE_BOT_MODE": {
-        "description": "Set it True, If you want your bot to be private for authorized chats. Else leave it blank",
-        "value": "False",
-        "required": false
-      },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "Mongo DB URL",
-        "value": "",
-        "required": true
-      },
-      "MUSIC_BOT_NAME": {
-        "description": "A name for your Music Bot. Please don't use ascii characters",
+        "description": "Get a mongodb url from https://cloud.mongodb.com.",
         "value": "",
         "required": true
       },
       "OWNER_ID": {
-        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "description": "The user id of user whom you would like to add as OWNER.",
         "value": "",
         "required": true
       },
+      "SUPPORT_CHANNEL": {
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "https://t.me/MGIMT",
+        "required": true
+      },
+      "SUPPORT_GROUP": {
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "https://t.me/IQSUPP",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "If you want your assistant to leave all chats automatically after some time.",
+        "value": "True",
+        "required": false
+      },
       "STRING_SESSION": {
-        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
         "value": "",
         "required": true
       },
@@ -64,7 +63,7 @@
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app/bot's name",
+        "description": "Your heroku app name",
         "value": "",
         "required": false
       },
@@ -79,7 +78,7 @@
         "required": true
       },
       "UPSTREAM_BRANCH": {
-        "description": "Repo's Branch Name",
+        "description": "Upstream Repo's Branch Name",
         "value": "master",
         "required": true
       }
@@ -95,11 +94,5 @@
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
       ],
-      "formation": {
-          "worker": {
-              "quantity": 1,
-              "size": "free"
-          }
-      },
       "stack": "container"
   }
